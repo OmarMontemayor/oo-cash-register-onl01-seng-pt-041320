@@ -8,7 +8,6 @@ class CashRegister
   end
   
   def add_item(title, price, quantity = 1)
-    @total += (price * quantity)
     @item = title
     if quantity > 1
       counter = 0
@@ -19,6 +18,7 @@ class CashRegister
     else
       @items << title
     end
+    @total += (price * quantity)
   end
   
   def apply_discount
